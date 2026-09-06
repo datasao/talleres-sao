@@ -50,6 +50,55 @@
 
 
     /* =========================
+       PRÓXIMO PARTIDO
+    ========================== */
+
+    .next-match {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .next-team {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .next-team img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+    }
+
+    .next-team strong {
+      font-size: 15px;
+    }
+
+    .next-vs {
+      font-size: 13px;
+      font-weight: 900;
+      opacity: 0.55;
+    }
+
+    .next-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .next-info strong {
+      font-size: 14px;
+    }
+
+    .next-info span {
+      font-size: 13px;
+    }
+
+
+    /* =========================
        TORNEO FEDERAL
     ========================== */
 
@@ -120,6 +169,10 @@
       background: #f1f3f0;
     }
 
+    .federal-row.played {
+      background: #fafafa;
+    }
+
     .federal-date {
       font-size: 14px;
       font-weight: 800;
@@ -161,6 +214,27 @@
       color: #26322e;
     }
 
+    .match-result {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .match-result .talleres-score {
+      color: #111;
+    }
+
+    .match-result .newbery-score {
+      color: #111;
+    }
+
+    .match-result .divider {
+      opacity: 0.4;
+    }
+
     .federal-status {
       justify-self: end;
       padding: 8px 11px;
@@ -178,6 +252,11 @@
     .federal-status.libre {
       background: #eef1ee;
       color: #253530;
+    }
+
+    .federal-status.finished {
+      background: #111;
+      color: #fff;
     }
 
 
@@ -227,6 +306,10 @@
 
       .federal-team p {
         font-size: 12px;
+      }
+
+      .next-match {
+        justify-content: flex-start;
       }
 
     }
@@ -459,36 +542,55 @@
       </div>
 
 
-      <div class="fixture">
+      <div class="fixture next-match">
 
-        <img
-          src="./index_files/escudo.png"
-          alt="Escudo de Talleres"
-        >
+        <div class="next-team">
 
-        <strong>
-          Talleres SAO
-        </strong>
+          <img
+            src="./index_files/logos/deportivo-villalonga.png"
+            alt="Deportivo Villalonga"
+          >
 
-        <span class="versus">
+          <strong>
+            Deportivo Villalonga
+          </strong>
+
+        </div>
+
+
+        <span class="next-vs">
           VS
         </span>
 
-        <span>
-          Rival a confirmar
-        </span>
+
+        <div class="next-team">
+
+          <img
+            src="./index_files/escudo.png"
+            alt="Talleres"
+          >
+
+          <strong>
+            Talleres SAO
+          </strong>
+
+        </div>
 
       </div>
 
 
-      <div class="pending">
+      <div class="pending next-info">
 
-        <span class="dot"></span>
+        <strong>
+          Domingo 13 de septiembre de 2026
+        </strong>
 
-        Programación pendiente
+        <span>
+          Estadio Miguel Ángel Recondo · Carmen de Patagones
+        </span>
 
         <small>
-          Fecha, horario y cancha por confirmar.
+          Horario a confirmar
         </small>
 
       </div>
@@ -577,7 +679,7 @@
 
         <!-- FECHA 2 -->
 
-        <article class="federal-row">
+        <article class="federal-row played">
 
           <div class="federal-date">
             Fecha 2
@@ -593,16 +695,28 @@
 
             <div>
 
-              <h3>
-                Jorge Newbery
-              </h3>
+              <div class="match-result">
+
+                <span class="talleres-score">
+                  Talleres 0
+                </span>
+
+                <span class="divider">
+                  -
+                </span>
+
+                <span class="newbery-score">
+                  2 Jorge Newbery
+                </span>
+
+              </div>
 
               <p>
                 Domingo 6 de septiembre de 2026 · 13:00 hs
               </p>
 
               <p>
-                Cancha de Talleres
+                Cancha de Talleres · San Antonio Oeste
               </p>
 
             </div>
@@ -610,8 +724,8 @@
           </div>
 
 
-          <span class="federal-status local">
-            Local
+          <span class="federal-status finished">
+            Finalizado
           </span>
 
         </article>
@@ -641,7 +755,15 @@
               </h3>
 
               <p>
-                Fecha y horario a confirmar
+                Domingo 13 de septiembre de 2026
+              </p>
+
+              <p>
+                Estadio Miguel Ángel Recondo · Carmen de Patagones
+              </p>
+
+              <p>
+                Horario a confirmar
               </p>
 
             </div>
