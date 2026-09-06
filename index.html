@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
 
@@ -15,7 +16,6 @@
     content="Club Atlético Talleres de San Antonio Oeste. Historia, fútbol y comunidad aurinegra."
   >
 
-  <!-- Recursos principales -->
   <link
     rel="preload"
     href="./index_files/escudo.png"
@@ -28,38 +28,239 @@
     as="image"
   >
 
-  <!-- Estilos originales -->
   <link
     rel="stylesheet"
     href="./index_files/index.DuceRrPT.css"
   >
 
   <style>
+
     html {
       scroll-behavior: smooth;
     }
+
+    #club,
+    #futbol,
+    #destacados,
+    #agenda,
+    #federal,
+    #contacto {
+      scroll-margin-top: 120px;
+    }
+
+
+    /* =========================
+       TORNEO FEDERAL
+    ========================== */
+
+    .federal-section {
+      padding: 65px 5%;
+      background: #f4f5f1;
+      color: #111;
+      border-top: 1px solid #d9dbd5;
+    }
+
+    .federal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 28px;
+    }
+
+    .federal-kicker {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: #008d82;
+    }
+
+    .federal-header h2 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    .federal-header p {
+      margin: 0;
+      font-size: 15px;
+      opacity: 0.75;
+    }
+
+    .federal-shield {
+      width: 58px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .federal-list {
+      border: 1px solid #d4d7d0;
+      border-bottom: 4px solid #141414;
+      background: #fff;
+    }
+
+    .federal-row {
+      display: grid;
+      grid-template-columns: 100px 1fr 110px;
+      align-items: center;
+      gap: 18px;
+      min-height: 88px;
+      padding: 14px 20px;
+      border-bottom: 1px solid #d4d7d0;
+    }
+
+    .federal-row:last-child {
+      border-bottom: none;
+    }
+
+    .federal-row.free {
+      background: #f1f3f0;
+    }
+
+    .federal-date {
+      font-size: 14px;
+      font-weight: 800;
+      color: #283732;
+    }
+
+    .federal-team {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .federal-team img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .federal-no-logo {
+      width: 42px;
+      text-align: center;
+      font-size: 18px;
+      color: #7a817d;
+      flex-shrink: 0;
+    }
+
+    .federal-team h3 {
+      margin: 0 0 5px;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .federal-team p {
+      margin: 2px 0;
+      font-size: 13px;
+      line-height: 1.35;
+      color: #26322e;
+    }
+
+    .federal-status {
+      justify-self: end;
+      padding: 8px 11px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .federal-status.local {
+      background: #d8f2e9;
+      color: #006b59;
+    }
+
+    .federal-status.visitor,
+    .federal-status.libre {
+      background: #eef1ee;
+      color: #253530;
+    }
+
+
+    @media (max-width: 760px) {
+
+      .federal-section {
+        padding: 45px 18px;
+      }
+
+      .federal-header {
+        gap: 20px;
+      }
+
+      .federal-shield {
+        width: 46px;
+      }
+
+      .federal-row {
+        grid-template-columns: 1fr auto;
+        gap: 10px 14px;
+        padding: 16px;
+      }
+
+      .federal-date {
+        grid-column: 1 / -1;
+        font-size: 12px;
+      }
+
+      .federal-team {
+        grid-column: 1;
+      }
+
+      .federal-status {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      .federal-team img,
+      .federal-no-logo {
+        width: 36px;
+        height: 36px;
+      }
+
+      .federal-team h3 {
+        font-size: 15px;
+      }
+
+      .federal-team p {
+        font-size: 12px;
+      }
+
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- Accesibilidad -->
+
   <a class="skip" href="#contenido">
     Saltar al contenido
   </a>
 
 
-  <!-- BARRA SUPERIOR -->
   <div class="topline">
-    <span>SAN ANTONIO OESTE · RÍO NEGRO</span>
-    <span>DESDE EL 31 DE JULIO DE 1931</span>
+
+    <span>
+      SAN ANTONIO OESTE · RÍO NEGRO
+    </span>
+
+    <span>
+      DESDE EL 31 DE JULIO DE 1931
+    </span>
+
   </div>
 
 
-  <!-- HEADER -->
   <header>
 
     <a class="brand" href="#">
+
       <img
         src="./index_files/escudo.png"
         alt="Escudo de Talleres"
@@ -69,6 +270,7 @@
         TALLERES
         <small>SAN ANTONIO OESTE</small>
       </span>
+
     </a>
 
 
@@ -80,6 +282,10 @@
 
       <a href="#futbol">
         Fútbol
+      </a>
+
+      <a href="#federal">
+        Federal
       </a>
 
       <a href="#destacados">
@@ -102,18 +308,27 @@
   </header>
 
 
-  <!-- CONTENIDO PRINCIPAL -->
   <main id="contenido">
 
 
-    <!-- ENCABEZADO -->
     <div class="sectionline">
-      <span>CLUB ATLÉTICO TALLERES</span>
-      <span>AMARILLO Y NEGRO. SIEMPRE.</span>
+
+      <span>
+        CLUB ATLÉTICO TALLERES
+      </span>
+
+      <span>
+        AMARILLO Y NEGRO. SIEMPRE.
+      </span>
+
     </div>
 
 
-    <!-- DESTACADOS -->
+
+    <!-- =========================
+         DESTACADOS
+    ========================== -->
+
     <section
       class="newsgrid"
       id="destacados"
@@ -121,7 +336,6 @@
     >
 
 
-      <!-- HERO -->
       <a
         class="hero"
         href="#club"
@@ -130,7 +344,7 @@
         <img
           class="hero-photo"
           src="./index_files/equipo.jpg"
-          alt="Talleres de San Antonio Oeste, equipo campeón de 2018"
+          alt="Talleres de San Antonio Oeste"
         >
 
         <div class="shade"></div>
@@ -162,11 +376,10 @@
       </a>
 
 
-      <!-- TARJETAS LATERALES -->
+
       <div class="sidecards">
 
 
-        <!-- EL CLUB -->
         <a
           class="identity-card"
           href="#club"
@@ -178,7 +391,7 @@
 
           <img
             src="./index_files/escudo.png"
-            alt="Escudo del Club Atlético Talleres"
+            alt="Escudo de Talleres"
           >
 
           <div>
@@ -198,7 +411,7 @@
         </a>
 
 
-        <!-- FÚTBOL -->
+
         <a
           class="football-card"
           href="#futbol"
@@ -227,7 +440,11 @@
     </section>
 
 
-    <!-- AGENDA -->
+
+    <!-- =========================
+         AGENDA
+    ========================== -->
+
     <section
       class="agenda"
       id="agenda"
@@ -283,7 +500,294 @@
     </section>
 
 
-    <!-- CLUB -->
+
+    <!-- =========================
+         FEDERAL
+    ========================== -->
+
+    <section
+      class="federal-section"
+      id="federal"
+    >
+
+
+      <div class="federal-header">
+
+        <div>
+
+          <span class="federal-kicker">
+            TORNEO REGIONAL FEDERAL AMATEUR 2026
+          </span>
+
+          <h2>
+            El camino de Talleres en el Federal
+          </h2>
+
+          <p>
+            Fixture de la fase de grupos · Ida y vuelta
+          </p>
+
+        </div>
+
+
+        <img
+          class="federal-shield"
+          src="./index_files/escudo.png"
+          alt="Escudo de Talleres"
+        >
+
+      </div>
+
+
+
+      <div class="federal-list">
+
+
+        <!-- FECHA 1 -->
+
+        <article class="federal-row free">
+
+          <div class="federal-date">
+            Fecha 1
+          </div>
+
+
+          <div class="federal-team">
+
+            <span class="federal-no-logo">
+              —
+            </span>
+
+            <div>
+
+              <h3>
+                Talleres queda libre
+              </h3>
+
+              <p>
+                Primera rueda
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <span class="federal-status libre">
+            Libre
+          </span>
+
+        </article>
+
+
+
+        <!-- FECHA 2 -->
+
+        <article class="federal-row">
+
+          <div class="federal-date">
+            Fecha 2
+          </div>
+
+
+          <div class="federal-team">
+
+            <img
+              src="./logos/jorge-newbery.png"
+              alt="Jorge Newbery"
+            >
+
+            <div>
+
+              <h3>
+                Jorge Newbery
+              </h3>
+
+              <p>
+                Domingo 6 de septiembre de 2026 · 13:00 hs
+              </p>
+
+              <p>
+                Cancha de Talleres
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <span class="federal-status local">
+            Local
+          </span>
+
+        </article>
+
+
+
+        <!-- FECHA 3 -->
+
+        <article class="federal-row">
+
+          <div class="federal-date">
+            Fecha 3
+          </div>
+
+
+          <div class="federal-team">
+
+            <img
+              src="./logos/deportivo-villalonga.png"
+              alt="Deportivo Villalonga"
+            >
+
+            <div>
+
+              <h3>
+                Deportivo Villalonga
+              </h3>
+
+              <p>
+                Fecha y horario a confirmar
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <span class="federal-status visitor">
+            Visitante
+          </span>
+
+        </article>
+
+
+
+        <!-- FECHA 4 -->
+
+        <article class="federal-row free">
+
+          <div class="federal-date">
+            Fecha 4
+          </div>
+
+
+          <div class="federal-team">
+
+            <span class="federal-no-logo">
+              —
+            </span>
+
+            <div>
+
+              <h3>
+                Talleres queda libre
+              </h3>
+
+              <p>
+                Segunda rueda
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <span class="federal-status libre">
+            Libre
+          </span>
+
+        </article>
+
+
+
+        <!-- FECHA 5 -->
+
+        <article class="federal-row">
+
+          <div class="federal-date">
+            Fecha 5
+          </div>
+
+
+          <div class="federal-team">
+
+            <img
+              src="./logos/jorge-newbery.png"
+              alt="Jorge Newbery"
+            >
+
+            <div>
+
+              <h3>
+                Jorge Newbery
+              </h3>
+
+              <p>
+                Fecha y horario a confirmar
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <span class="federal-status visitor">
+            Visitante
+          </span>
+
+        </article>
+
+
+
+        <!-- FECHA 6 -->
+
+        <article class="federal-row">
+
+          <div class="federal-date">
+            Fecha 6
+          </div>
+
+
+          <div class="federal-team">
+
+            <img
+              src="./logos/deportivo-villalonga.png"
+              alt="Deportivo Villalonga"
+            >
+
+            <div>
+
+              <h3>
+                Deportivo Villalonga
+              </h3>
+
+              <p>
+                Fecha y horario a confirmar
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <span class="federal-status local">
+            Local
+          </span>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CLUB
+    ========================== -->
+
     <section
       class="club"
       id="club"
@@ -317,6 +821,7 @@
         </a>
 
       </div>
+
 
 
       <div class="facts">
@@ -379,7 +884,11 @@
     </section>
 
 
-    <!-- FÚTBOL -->
+
+    <!-- =========================
+         FÚTBOL
+    ========================== -->
+
     <section
       class="football"
       id="futbol"
@@ -397,6 +906,7 @@
         </h2>
 
       </div>
+
 
 
       <div class="football-info">
@@ -420,6 +930,7 @@
         </article>
 
 
+
         <article>
 
           <span>
@@ -436,6 +947,7 @@
           </p>
 
         </article>
+
 
 
         <article>
@@ -461,7 +973,11 @@
     </section>
 
 
-    <!-- CONTACTO / SEDE -->
+
+    <!-- =========================
+         SEDE
+    ========================== -->
+
     <section
       class="contact"
       id="contacto"
@@ -493,7 +1009,7 @@
   </main>
 
 
-  <!-- FOOTER -->
+
   <footer>
 
 
@@ -530,4 +1046,5 @@
 
 
 </body>
+
 </html>
