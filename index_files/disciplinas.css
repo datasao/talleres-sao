@@ -92,18 +92,18 @@
   background: #111;
 }
 
-.discipline-hero::before {
-  content: "";
-
+.discipline-hero-photo {
   position: absolute;
   inset: 0;
+  z-index: 0;
 
-  background-image: var(--discipline-image);
-  background-position: center;
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
 
   filter: saturate(.9);
-  transform: scale(1.01);
 }
 
 .discipline-hero::after {
