@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Nuestra Historia | Talleres SAO</title>
+
+  <meta
+    name="description"
+    content="Historia del Club Atlético Talleres de San Antonio Oeste desde su fundación en 1931."
+  >
+
+  <link
+    rel="preload"
+    href="./index_files/escudo.png"
+    as="image"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./index_files/index.DuceRrPT.css"
+  >
+
+
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f4f4ef;
+    }
+
+
+    /* ==================================================
+       HERO HISTORIA
+    ================================================== */
+
+    .story-hero {
+      position: relative;
+
+      min-height: 650px;
+
+      display: flex;
+      align-items: flex-end;
+
+      overflow: hidden;
+
+      background: #111;
+      color: #fff;
+    }
+
+    .story-hero-image {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      filter: grayscale(1);
+    }
+
+    .story-hero-overlay {
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.92) 0%,
+          rgba(0,0,0,.66) 48%,
+          rgba(0,0,0,.18) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(0,0,0,.8) 0%,
+          transparent 60%
+        );
+    }
+
+    .story-hero-content {
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+
+      padding: 80px 5%;
+    }
+
+    .story-back {
+      display: inline-block;
+
+      margin-bottom: 55px;
+
+      color: #ffd400;
+
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .story-back:hover {
+      text-decoration: underline;
+    }
+
+    .story-kicker {
+      display: block;
+
+      margin-bottom: 14px;
+
+      color: #ffd400;
+
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .story-hero h1 {
+      max-width: 850px;
+
+      margin: 0 0 25px;
+
+      color: #fff;
+
+      font-size: clamp(55px, 8vw, 115px);
+      line-height: .84;
+      letter-spacing: -.06em;
+    }
+
+    .story-hero h1 em {
+      display: block;
+
+      color: #ffd400;
+
+      font-style: normal;
+    }
+
+    .story-hero p {
+      max-width: 660px;
+
+      margin: 0;
+
+      color: rgba(255,255,255,.8);
+
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+
+    /* ==================================================
+       INTRO
+    ================================================== */
+
+    .story-intro {
+      display: grid;
+      grid-template-columns: minmax(200px, .65fr) minmax(0, 1.35fr);
+
+      gap: 80px;
+
+      padding: 100px 5%;
+
+      background: #ffd400;
+      color: #111;
+    }
+
+    .story-intro-label {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .story-intro-text {
+      max-width: 850px;
+
+      margin: 0;
+
+      font-size: clamp(26px, 3vw, 43px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -.025em;
+    }
+
+
+    /* ==================================================
+       TEXTO
+    ================================================== */
+
+    .story-content {
+      padding: 100px 5%;
+
+      background: #f4f4ef;
+      color: #111;
+    }
+
+    .story-section {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 760px);
+
+      justify-content: space-between;
+
+      gap: 80px;
+
+      max-width: 1200px;
+
+      margin: 0 auto 100px;
+    }
+
+    .story-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-section-side {
+      align-self: start;
+
+      position: sticky;
+      top: 130px;
+    }
+
+    .story-section-side span {
+      display: block;
+
+      margin-bottom: 10px;
+
+      color: #706f68;
+
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .story-section-side h2 {
+      margin: 0;
+
+      font-size: 27px;
+      line-height: 1.05;
+    }
+
+    .story-text p {
+      margin: 0 0 26px;
+
+      color: #333;
+
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .story-text p:first-child {
+      color: #111;
+
+      font-size: 20px;
+    }
+
+
+    /* ==================================================
+       ARCHIVO FOTOGRÁFICO
+    ================================================== */
+
+    .story-archive {
+      padding: 100px 5%;
+
+      background: #111;
+      color: #fff;
+    }
+
+    .story-archive-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      gap: 40px;
+
+      margin-bottom: 45px;
+    }
+
+    .story-archive-header span {
+      color: #ffd400;
+
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .story-archive-header h2 {
+      margin: 8px 0 0;
+
+      color: #fff;
+
+      font-size: clamp(38px, 5vw, 65px);
+      letter-spacing: -.04em;
+    }
+
+    .story-archive-header p {
+      max-width: 450px;
+
+      margin: 0;
+
+      color: rgba(255,255,255,.6);
+
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .story-gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      gap: 18px;
+    }
+
+    .story-photo {
+      position: relative;
+
+      overflow: hidden;
+
+      min-height: 330px;
+
+      background: #222;
+    }
+
+    .story-photo:nth-child(1) {
+      grid-column: span 7;
+    }
+
+    .story-photo:nth-child(2) {
+      grid-column: span 5;
+    }
+
+    .story-photo:nth-child(3) {
+      grid-column: span 4;
+    }
+
+    .story-photo:nth-child(4) {
+      grid-column: span 8;
+    }
+
+    .story-photo:nth-child(5) {
+      grid-column: span 6;
+    }
+
+    .story-photo:nth-child(6) {
+      grid-column: span 6;
+    }
+
+    .story-photo:nth-child(7) {
+      grid-column: span 12;
+
+      min-height: 500px;
+    }
+
+    .story-photo img {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform .6s ease;
+    }
+
+    .story-photo:hover img {
+      transform: scale(1.035);
+    }
+
+    .story-photo::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          0deg,
+          rgba(0,0,0,.78) 0%,
+          transparent 55%
+        );
+    }
+
+    .story-photo-caption {
+      position: absolute;
+      z-index: 2;
+
+      right: 20px;
+      bottom: 18px;
+      left: 20px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      gap: 20px;
+    }
+
+    .story-photo-caption strong {
+      color: #fff;
+
+      font-size: 15px;
+    }
+
+    .story-photo-caption span {
+      color: #ffd400;
+
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+
+    /* ==================================================
+       DESTACADO
+    ================================================== */
+
+    .story-quote {
+      padding: 100px 5%;
+
+      background: #ffd400;
+      color: #111;
+
+      text-align: center;
+    }
+
+    .story-quote small {
+      display: block;
+
+      margin-bottom: 22px;
+
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .story-quote h2 {
+      max-width: 1100px;
+
+      margin: auto;
+
+      font-size: clamp(38px, 6vw, 82px);
+      line-height: .98;
+      letter-spacing: -.05em;
+    }
+
+
+    /* ==================================================
+       FINAL
+    ================================================== */
+
+    .story-final {
+      padding: 120px 5%;
+
+      background: #111;
+      color: #fff;
+    }
+
+    .story-final-inner {
+      max-width: 1000px;
+
+      margin: auto;
+    }
+
+    .story-final span {
+      display: block;
+
+      margin-bottom: 25px;
+
+      color: #ffd400;
+
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .story-final h2 {
+      margin: 0 0 45px;
+
+      color: #fff;
+
+      font-size: clamp(47px, 7vw, 95px);
+      line-height: .93;
+      letter-spacing: -.055em;
+    }
+
+    .story-final h2 em {
+      color: #ffd400;
+      font-style: normal;
+    }
+
+    .story-final p {
+      max-width: 800px;
+
+      margin: 0 0 20px;
+
+      color: rgba(255,255,255,.72);
+
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .story-home-button {
+      display: inline-flex;
+
+      margin-top: 30px;
+
+      padding: 15px 20px;
+
+      border: 1px solid #ffd400;
+
+      background: #ffd400;
+      color: #111;
+
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      transition: .25s ease;
+    }
+
+    .story-home-button:hover {
+      background: transparent;
+      color: #ffd400;
+    }
+
+
+    /* ==================================================
+       RESPONSIVE
+    ================================================== */
+
+    @media (max-width: 900px) {
+
+      .story-intro {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+      }
+
+      .story-section {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+      }
+
+      .story-section-side {
+        position: static;
+      }
+
+      .story-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .story-photo,
+      .story-photo:nth-child(1),
+      .story-photo:nth-child(2),
+      .story-photo:nth-child(3),
+      .story-photo:nth-child(4),
+      .story-photo:nth-child(5),
+      .story-photo:nth-child(6),
+      .story-photo:nth-child(7) {
+        grid-column: auto;
+
+        min-height: 400px;
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .story-hero {
+        min-height: 570px;
+      }
+
+      .story-hero-content {
+        padding: 55px 18px;
+      }
+
+      .story-back {
+        margin-bottom: 45px;
+      }
+
+      .story-hero h1 {
+        font-size: 58px;
+      }
+
+      .story-hero p {
+        font-size: 15px;
+      }
+
+      .story-intro {
+        padding: 65px 18px;
+      }
+
+      .story-intro-text {
+        font-size: 28px;
+      }
+
+      .story-content {
+        padding: 70px 18px;
+      }
+
+      .story-section {
+        margin-bottom: 70px;
+      }
+
+      .story-text p {
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .story-text p:first-child {
+        font-size: 18px;
+      }
+
+      .story-archive {
+        padding: 70px 18px;
+      }
+
+      .story-archive-header {
+        display: block;
+      }
+
+      .story-archive-header p {
+        margin-top: 20px;
+      }
+
+      .story-photo,
+      .story-photo:nth-child(7) {
+        min-height: 300px;
+      }
+
+      .story-quote {
+        padding: 75px 18px;
+      }
+
+      .story-final {
+        padding: 80px 18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+
+  <!-- TOP -->
+
+  <div class="topline">
+
+    <span>
+      SAN ANTONIO OESTE · RÍO NEGRO
+    </span>
+
+    <span>
+      DESDE EL 31 DE JULIO DE 1931
+    </span>
+
+  </div>
+
+
+
+  <!-- HEADER -->
+
+  <header>
+
+
+    <a
+      class="brand"
+      href="./index.html"
+    >
+
+      <img
+        src="./index_files/escudo.png"
+        alt="Escudo de Talleres"
+      >
+
+      <span>
+        TALLERES
+        <small>SAN ANTONIO OESTE</small>
+      </span>
+
+    </a>
+
+
+
+    <nav aria-label="Navegación principal">
+
+      <a href="./index.html">
+        Inicio
+      </a>
+
+      <a href="./historia.html">
+        Historia
+      </a>
+
+      <a href="./index.html#futbol">
+        Fútbol
+      </a>
+
+      <a href="./index.html#federal">
+        Federal
+      </a>
+
+      <a href="./index.html#agenda">
+        Agenda
+      </a>
+
+      <a
+        class="nav-contact"
+        href="./index.html#contacto"
+      >
+        Nuestra sede ↗
+      </a>
+
+    </nav>
+
+
+  </header>
+
+
+
+  <main>
+
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="story-hero">
+
+
+      <img
+        class="story-hero-image"
+        src="./index_files/historia/talleres-en-bariloche-1944.jpg"
+        alt="Archivo histórico del Club Atlético Talleres"
+      >
+
+
+      <div class="story-hero-overlay"></div>
+
+
+      <div class="story-hero-content">
+
+
+        <a
+          class="story-back"
+          href="./index.html"
+        >
+          ← VOLVER AL INICIO
+        </a>
+
+
+        <span class="story-kicker">
+          CLUB ATLÉTICO TALLERES · DESDE 1931
+        </span>
+
+
+        <h1>
+          Nuestra
+          <em>historia.</em>
+        </h1>
+
+
+        <p>
+          Más de nueve décadas de trabajo, deporte, familia,
+          identidad y pertenencia en San Antonio Oeste.
+        </p>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================== -->
+
+    <section class="story-intro">
+
+
+      <div class="story-intro-label">
+        NUESTRO ORIGEN
+      </div>
+
+
+      <p class="story-intro-text">
+        Talleres nació profundamente ligado al ferrocarril.
+        De trabajadores, vecinos y familias nació una institución
+        que se convirtió en una parte inseparable de San Antonio Oeste.
+      </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         ORIGEN
+    ================================================== -->
+
+    <section class="story-content">
+
+
+      <div class="story-section">
+
+
+        <aside class="story-section-side">
+
+          <span>
+            1931
+          </span>
+
+          <h2>
+            Donde comenzó todo.
+          </h2>
+
+        </aside>
+
+
+        <div class="story-text">
+
+
+          <p>
+            El Club Atlético Talleres de San Antonio Oeste nació
+            el 31 de julio de 1931, profundamente ligado a la
+            historia ferroviaria de nuestra ciudad.
+          </p>
+
+
+          <p>
+            Sus orígenes se encuentran en aquellos trabajadores del
+            ferrocarril que, además de cumplir sus tareas en los talleres
+            ferroviarios de San Antonio Oeste, encontraron en el deporte
+            una forma de encuentro, pertenencia e identidad.
+          </p>
+
+
+          <p>
+            Entre ellos hubo obreros llegados desde distintos puntos del
+            país, incluidos trabajadores provenientes de Tafí Viejo,
+            Tucumán, que junto a vecinos de la localidad comenzaron a
+            darle forma a una institución que con el paso del tiempo se
+            convertiría en una parte inseparable de la vida social y
+            deportiva de San Antonio Oeste.
+          </p>
+
+
+          <p>
+            El nombre Talleres no es casual. Representa nuestras raíces,
+            nuestra historia y el vínculo con una época en la que el
+            ferrocarril tuvo un papel fundamental en el desarrollo de
+            la ciudad.
+          </p>
+
+
+          <p>
+            De ese origen trabajador nació también el espíritu que todavía
+            identifica al club: esfuerzo, sacrificio, compromiso y sentido
+            de pertenencia.
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- CRECIMIENTO -->
+
+      <div class="story-section">
+
+
+        <aside class="story-section-side">
+
+          <span>
+            IDENTIDAD
+          </span>
+
+          <h2>
+            Amarillo y negro.
+          </h2>
+
+        </aside>
+
+
+        <div class="story-text">
+
+
+          <p>
+            Con el amarillo y el negro como colores distintivos,
+            Talleres fue creciendo generación tras generación.
+          </p>
+
+
+          <p>
+            El fútbol ocupó desde sus primeros años un lugar central
+            y rápidamente el club comenzó a formar parte de la
+            competencia local, construyendo una larga tradición dentro
+            del deporte sanantoniense.
+          </p>
+
+
+          <p>
+            A lo largo de las décadas, cientos de futbolistas vistieron
+            nuestra camiseta y muchas familias encontraron en Talleres
+            un lugar de encuentro.
+          </p>
+
+
+          <p>
+            Los nombres, las historias y los recuerdos fueron pasando
+            de padres a hijos, formando una identidad que excede
+            cualquier resultado deportivo.
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         ARCHIVO HISTÓRICO
+    ================================================== -->
+
+    <section class="story-archive">
+
+
+      <div class="story-archive-header">
+
+
+        <div>
+
+          <span>
+            ARCHIVO HISTÓRICO
+          </span>
+
+          <h2>
+            Generaciones aurinegras.
+          </h2>
+
+        </div>
+
+
+        <p>
+          Fotografías que forman parte de la memoria
+          deportiva e institucional de Talleres.
+        </p>
+
+
+      </div>
+
+
+
+      <div class="story-gallery">
+
+
+        <figure class="story-photo">
+
+          <img
+            src="./index_files/historia/talleres-en-bariloche-1944.jpg"
+            alt="Talleres en Bariloche en 1944"
+          >
+
+          <figcaption class="story-photo-caption">
+
+            <strong>
+              Talleres en Bariloche
+            </strong>
+
+            <span>
+              1944
+            </span>
+
+          </figcaption>
+
+        </figure>
+
+
+
+        <figure class="story-photo">
+
+          <img
+            src="./index_files/historia/talleres-vs-tronador-1945.jpg"
+            alt="Talleres frente a Tronador en 1945"
+          >
+
+          <figcaption class="story-photo-caption">
+
+            <strong>
+              Talleres vs. Tronador
+            </strong>
+
+            <span>
+              1945
+            </span>
+
+          </figcaption>
+
+        </figure>
+
+
+
+        <figure class="story-photo">
+
+          <img
+            src="./index_files/historia/2da-division-1950.jpg"
+            alt="Segunda División de Talleres en 1950"
+          >
+
+          <figcaption class="story-photo-caption">
+
+            <strong>
+              Segunda División
+            </strong>
+
+            <span>
+              1950
+            </span>
+
+          </figcaption>
+
+        </figure>
+
+
+
+        <figure class="story-photo">
+
+          <img
+            src="./index_files/historia/talleres-1958.jpg"
+            alt="Talleres en 1958"
+          >
+
+          <figcaption class="story-photo-caption">
+
+            <strong>
+              Talleres
+            </strong>
+
+            <span>
+              1958
+            </span>
+
+          </figcaption>
+
+        </figure>
+
+
+
+        <figure class="story-photo">
+
+          <img
+            src="./index_files/historia/talleres-1973.jpg"
+            alt="Talleres en 1973"
+          >
+
+          <figcaption class="story-photo-caption">
+
+            <strong>
+              Talleres
+            </strong>
+
+            <span>
+              1973
+            </span>
+
+          </figcaption>
+
+        </figure>
+
+
+
+        <figure class="story-photo">
+
+          <img
+            src="./index_files/historia/handball-decada-80.jpg"
+            alt="Handball de Talleres en la década de 1980"
+          >
+
+          <figcaption class="story-photo-caption">
+
+            <strong>
+              Handball de Talleres
+            </strong>
+
+            <span>
+              DÉCADA DEL 80
+            </span>
+
+          </figcaption>
+
+        </figure>
+
+
+
+        <figure class="story-photo">
+
+          <img
+            src="./index_files/historia/talleres-compra-terreno-1984.jpg"
+            alt="Compra del terreno de Talleres en 1984"
+          >
+
+          <figcaption class="story-photo-caption">
+
+            <strong>
+              Crecimiento institucional
+            </strong>
+
+            <span>
+              1984
+            </span>
+
+          </figcaption>
+
+        </figure>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         MÁS QUE FÚTBOL
+    ================================================== -->
+
+    <section class="story-content">
+
+
+      <div class="story-section">
+
+
+        <aside class="story-section-side">
+
+          <span>
+            EL CLUB
+          </span>
+
+          <h2>
+            Mucho más que fútbol.
+          </h2>
+
+        </aside>
+
+
+        <div class="story-text">
+
+
+          <p>
+            Pero Talleres nunca fue solamente fútbol.
+          </p>
+
+
+          <p>
+            Con el paso de los años, la institución incorporó distintas
+            disciplinas y actividades deportivas y sociales.
+          </p>
+
+
+          <p>
+            Básquet, tenis, bochas, handball, vóley, patín y otras
+            propuestas fueron encontrando su espacio dentro del club,
+            permitiendo que nuevas generaciones pudieran desarrollarse,
+            competir, aprender y compartir.
+          </p>
+
+
+          <p>
+            El crecimiento institucional también estuvo acompañado por
+            dirigentes, socios, deportistas y colaboradores que dedicaron
+            tiempo y esfuerzo para mejorar las instalaciones y ampliar
+            las posibilidades del club.
+          </p>
+
+
+          <p>
+            El gimnasio, los espacios deportivos, los vestuarios y los
+            distintos proyectos de infraestructura son parte de una
+            construcción colectiva que continúa hasta nuestros días.
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         FRASE
+    ================================================== -->
+
+    <section class="story-quote">
+
+      <small>
+        UNA IDENTIDAD QUE ATRAVIESA GENERACIONES
+      </small>
+
+      <h2>
+        Talleres nunca fue solamente fútbol.
+      </h2>
+
+    </section>
+
+
+
+    <!-- =================================================
+         COMPETENCIAS
+    ================================================== -->
+
+    <section class="story-content">
+
+
+      <div class="story-section">
+
+
+        <aside class="story-section-side">
+
+          <span>
+            FÚTBOL
+          </span>
+
+          <h2>
+            Representando a San Antonio Oeste.
+          </h2>
+
+        </aside>
+
+
+        <div class="story-text">
+
+
+          <p>
+            En el fútbol, Talleres escribió numerosas páginas importantes.
+          </p>
+
+
+          <p>
+            La institución logró múltiples campeonatos en las competencias
+            regionales y se convirtió en uno de los clubes más representativos
+            de la zona.
+          </p>
+
+
+          <p>
+            Desde la década de 2010, el equipo volvió a consolidarse como
+            protagonista, obteniendo títulos y accediendo a torneos de
+            alcance nacional.
+          </p>
+
+
+          <p>
+            Talleres representó a San Antonio Oeste en competencias como
+            el Torneo del Interior, el Federal C y el Torneo Regional Federal
+            Amateur, llevando nuestros colores a distintas localidades de la
+            Patagonia y enfrentando a instituciones de toda la región.
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- FORMATIVAS -->
+
+      <div class="story-section">
+
+
+        <aside class="story-section-side">
+
+          <span>
+            2021
+          </span>
+
+          <h2>
+            Formar desde abajo.
+          </h2>
+
+        </aside>
+
+
+        <div class="story-text">
+
+
+          <p>
+            También las divisiones formativas tuvieron momentos históricos.
+          </p>
+
+
+          <p>
+            En 2021, la categoría 2008 consiguió un logro inolvidable al
+            consagrarse campeona del tradicional Mundialito Infantil
+            organizado por Deportivo Roca, convirtiéndose en el primer
+            equipo de San Antonio Oeste en alcanzar ese título.
+          </p>
+
+
+          <p>
+            Ese triunfo representa uno de los valores fundamentales de
+            Talleres: formar desde abajo, acompañar a nuestros jóvenes y
+            generar espacios donde puedan crecer tanto deportiva como
+            personalmente.
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         CIERRE
+    ================================================== -->
+
+    <section class="story-final">
+
+
+      <div class="story-final-inner">
+
+
+        <span>
+          UNA HISTORIA QUE CONTINÚA
+        </span>
+
+
+        <h2>
+          Talleres es<br>
+          <em>San Antonio Oeste.</em>
+        </h2>
+
+
+        <p>
+          Hoy, más de nueve décadas después de aquel 31 de julio de 1931,
+          Talleres continúa escribiendo su historia.
+        </p>
+
+
+        <p>
+          Una historia construida por ferroviarios, deportistas,
+          dirigentes, entrenadores, familias, socios, hinchas y vecinos.
+          Una historia hecha de tardes de fútbol, entrenamientos,
+          campeonatos, viajes, sacrificios, festejos y también momentos
+          difíciles que ayudaron a fortalecer a la institución.
+        </p>
+
+
+        <p>
+          Generaciones enteras crecieron dentro del club y otras siguen
+          llegando para continuar ese legado.
+        </p>
+
+
+        <p>
+          Porque Talleres no es solamente una camiseta amarilla y negra.
+          Talleres es memoria. Es identidad. Es trabajo. Es pertenencia.
+          Es San Antonio Oeste.
+        </p>
+
+
+        <p>
+          Y mientras haya alguien dispuesto a defender estos colores,
+          nuestra historia seguirá escribiéndose.
+        </p>
+
+
+        <a
+          class="story-home-button"
+          href="./index.html"
+        >
+          ← VOLVER A LA PÁGINA PRINCIPAL
+        </a>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+
+    <a
+      class="brand"
+      href="./index.html"
+    >
+
+      <img
+        src="./index_files/escudo.png"
+        alt="Escudo del Club Atlético Talleres"
+      >
+
+      <span>
+        TALLERES
+        <small>SAN ANTONIO OESTE</small>
+      </span>
+
+    </a>
+
+
+    <p>
+      Amarillo y negro, desde 1931.
+    </p>
+
+
+    <small>
+      Club Atlético Talleres · San Antonio Oeste · Río Negro.
+    </small>
+
+
+  </footer>
+
+
+</body>
+
+</html>

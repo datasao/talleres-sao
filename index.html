@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -41,93 +42,105 @@
     }
 
     #club,
-    #historia,
     #futbol,
     #destacados,
     #agenda,
     #federal,
-    #contacto {
+    #contacto,
+    #historia-resumen {
       scroll-margin-top: 120px;
     }
 
 
-    /* =====================================================
-       HISTORIA
-    ===================================================== */
+    /* ==================================================
+       HISTORIA - RESUMEN HOME
+    ================================================== */
 
-    .history-section {
+    .history-home {
       padding: 80px 5%;
       background: #101010;
       color: #fff;
       overflow: hidden;
     }
 
-    .history-intro {
+    .history-home-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: 60px;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
       align-items: center;
+      gap: 60px;
     }
 
-    .history-copy {
+    .history-home-copy {
       max-width: 620px;
     }
 
     .history-kicker {
       display: block;
       margin-bottom: 14px;
+
       color: #ffd400;
+
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: 0.18em;
+      letter-spacing: .18em;
       text-transform: uppercase;
     }
 
-    .history-copy h2 {
+    .history-home h2 {
       margin: 0 0 22px;
-      font-size: clamp(39px, 5vw, 68px);
-      line-height: 0.98;
-      letter-spacing: -0.045em;
+
       color: #fff;
+
+      font-size: clamp(40px, 5vw, 68px);
+      line-height: .98;
+      letter-spacing: -.045em;
     }
 
-    .history-copy h2 em {
+    .history-home h2 em {
       color: #ffd400;
       font-style: normal;
     }
 
     .history-lead {
       margin: 0 0 18px;
+
+      color: rgba(255,255,255,.94);
+
       font-size: 17px;
       line-height: 1.75;
-      color: rgba(255, 255, 255, 0.95);
     }
 
     .history-summary {
       margin: 0 0 30px;
+
+      color: rgba(255,255,255,.65);
+
       font-size: 14px;
       line-height: 1.8;
-      color: rgba(255, 255, 255, 0.64);
     }
 
-    .history-open {
+    .history-link {
       display: inline-flex;
       align-items: center;
       gap: 12px;
+
+      padding: 15px 20px;
+
       border: 1px solid #ffd400;
-      padding: 14px 18px;
+
       background: #ffd400;
       color: #111;
-      font-family: inherit;
+
       font-size: 11px;
       font-weight: 900;
       letter-spacing: .06em;
+      text-decoration: none;
       text-transform: uppercase;
-      cursor: pointer;
+
       transition: .25s ease;
     }
 
-    .history-open:hover {
+    .history-link:hover {
       background: transparent;
       color: #ffd400;
     }
@@ -139,66 +152,83 @@
       min-width: 0;
     }
 
-    .history-carousel-frame {
+    .history-frame {
       position: relative;
+
       overflow: hidden;
+
       aspect-ratio: 16 / 10;
+
       background: #222;
     }
 
     .history-track {
       display: flex;
+
       height: 100%;
-      transition: transform .7s cubic-bezier(.22,.61,.36,1);
+
+      transition:
+        transform .7s cubic-bezier(.22,.61,.36,1);
+
       will-change: transform;
     }
 
     .history-slide {
       position: relative;
+
       min-width: 100%;
       height: 100%;
     }
 
     .history-slide img {
       display: block;
+
       width: 100%;
       height: 100%;
+
       object-fit: cover;
     }
 
     .history-slide::after {
       content: "";
+
       position: absolute;
       inset: 0;
+
       background:
         linear-gradient(
           180deg,
           rgba(0,0,0,.02) 45%,
           rgba(0,0,0,.82) 100%
         );
+
       pointer-events: none;
     }
 
     .history-caption {
       position: absolute;
       z-index: 2;
+
       right: 22px;
-      bottom: 19px;
+      bottom: 20px;
       left: 22px;
+
       display: flex;
       justify-content: space-between;
-      align-items: end;
+      align-items: flex-end;
+
       gap: 20px;
     }
 
     .history-caption strong {
-      display: block;
       color: #fff;
+
       font-size: 15px;
     }
 
     .history-caption small {
       color: #ffd400;
+
       font-size: 10px;
       font-weight: 900;
       letter-spacing: .12em;
@@ -209,163 +239,98 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 14px;
+
       gap: 20px;
+
+      margin-top: 14px;
     }
 
     .history-dots {
       display: flex;
       align-items: center;
+
       gap: 6px;
     }
 
     .history-dot {
       width: 22px;
       height: 3px;
+
       padding: 0;
+
       border: 0;
+
       background: rgba(255,255,255,.22);
+
       cursor: pointer;
+
       transition: .25s ease;
     }
 
     .history-dot.active {
       width: 42px;
+
       background: #ffd400;
     }
 
     .history-arrows {
       display: flex;
+
       gap: 7px;
     }
 
     .history-arrow {
       display: grid;
       place-items: center;
+
       width: 42px;
       height: 42px;
+
       border: 1px solid rgba(255,255,255,.27);
+
       background: transparent;
       color: #fff;
+
       font-size: 18px;
+
       cursor: pointer;
+
       transition: .2s ease;
     }
 
     .history-arrow:hover {
       border-color: #ffd400;
+
       background: #ffd400;
       color: #111;
     }
 
 
-    /* HISTORIA COMPLETA */
-
-    .history-complete {
-      display: none;
-      margin-top: 70px;
-      padding-top: 55px;
-      border-top: 1px solid rgba(255,255,255,.15);
-    }
-
-    .history-complete.visible {
-      display: block;
-      animation: showHistory .4s ease;
-    }
-
-    @keyframes showHistory {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .history-complete-grid {
-      display: grid;
-      grid-template-columns: minmax(180px, 260px) minmax(0, 820px);
-      justify-content: space-between;
-      gap: 70px;
-    }
-
-    .history-side {
-      align-self: start;
-      position: sticky;
-      top: 130px;
-    }
-
-    .history-side span {
-      display: block;
-      margin-bottom: 13px;
-      color: #ffd400;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-
-    .history-side h3 {
-      margin: 0;
-      color: #fff;
-      font-size: 31px;
-      line-height: 1.05;
-    }
-
-    .history-article p {
-      margin: 0 0 25px;
-      color: rgba(255,255,255,.74);
-      font-size: 15px;
-      line-height: 1.9;
-    }
-
-    .history-article p:first-child {
-      color: #fff;
-      font-size: 18px;
-    }
-
-    .history-highlight {
-      margin: 45px 0;
-      padding: 12px 0 12px 27px;
-      border-left: 5px solid #ffd400;
-    }
-
-    .history-highlight strong {
-      display: block;
-      color: #fff;
-      font-size: clamp(29px, 4vw, 49px);
-      line-height: 1.1;
-    }
-
-    .history-highlight strong:last-child {
-      color: #ffd400;
-    }
-
-
-    /* =====================================================
+    /* ==================================================
        PRÓXIMO PARTIDO
-    ===================================================== */
+    ================================================== */
 
     .next-match {
       display: flex;
       align-items: center;
       justify-content: center;
+
       gap: 22px;
+
       flex-wrap: wrap;
     }
 
     .next-team {
       display: flex;
       align-items: center;
+
       gap: 10px;
     }
 
     .next-team img {
       width: 46px;
       height: 46px;
+
       object-fit: contain;
     }
 
@@ -374,14 +339,16 @@
     }
 
     .next-vs {
+      opacity: .55;
+
       font-size: 13px;
       font-weight: 900;
-      opacity: .55;
     }
 
     .next-info {
       display: flex;
       flex-direction: column;
+
       gap: 4px;
     }
 
@@ -394,29 +361,36 @@
     }
 
 
-    /* =====================================================
+    /* ==================================================
        FEDERAL
-    ===================================================== */
+    ================================================== */
 
     .federal-section {
       padding: 65px 5%;
+
+      border-top: 1px solid #d9dbd5;
+
       background: #f4f5f1;
       color: #111;
-      border-top: 1px solid #d9dbd5;
     }
 
     .federal-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+
       gap: 40px;
+
       margin-bottom: 28px;
     }
 
     .federal-kicker {
       display: block;
+
       margin-bottom: 10px;
+
       color: #008d82;
+
       font-size: 12px;
       font-weight: 800;
       letter-spacing: .15em;
@@ -424,14 +398,17 @@
 
     .federal-header h2 {
       margin: 0 0 10px;
+
       font-size: clamp(26px, 3vw, 38px);
       line-height: 1.1;
     }
 
     .federal-header p {
       margin: 0;
-      font-size: 15px;
+
       opacity: .75;
+
+      font-size: 15px;
     }
 
     .federal-shield {
@@ -442,6 +419,7 @@
     .federal-list {
       border: 1px solid #d4d7d0;
       border-bottom: 4px solid #141414;
+
       background: #fff;
     }
 
@@ -449,9 +427,13 @@
       display: grid;
       grid-template-columns: 100px 1fr 110px;
       align-items: center;
+
       gap: 18px;
+
       min-height: 88px;
+
       padding: 14px 20px;
+
       border-bottom: 1px solid #d4d7d0;
     }
 
@@ -469,6 +451,7 @@
 
     .federal-date {
       color: #283732;
+
       font-size: 14px;
       font-weight: 800;
     }
@@ -476,32 +459,42 @@
     .federal-team {
       display: flex;
       align-items: center;
+
       gap: 14px;
+
       min-width: 0;
     }
 
     .federal-team img {
       width: 42px;
       height: 42px;
+
       object-fit: contain;
+
       flex-shrink: 0;
     }
 
     .federal-no-logo {
       width: 42px;
+
       flex-shrink: 0;
-      text-align: center;
+
       color: #7a817d;
+
+      text-align: center;
     }
 
     .federal-team h3 {
       margin: 0 0 5px;
+
       font-size: 16px;
     }
 
     .federal-team p {
       margin: 2px 0;
+
       color: #26322e;
+
       font-size: 13px;
       line-height: 1.35;
     }
@@ -509,8 +502,11 @@
     .match-result {
       display: flex;
       flex-wrap: wrap;
+
       gap: 8px;
+
       margin-bottom: 5px;
+
       font-size: 18px;
       font-weight: 900;
     }
@@ -521,9 +517,12 @@
 
     .federal-status {
       justify-self: end;
+
       padding: 8px 11px;
+
       font-size: 13px;
       font-weight: 800;
+
       white-space: nowrap;
     }
 
@@ -544,28 +543,20 @@
     }
 
 
-    /* =====================================================
+    /* ==================================================
        RESPONSIVE
-    ===================================================== */
+    ================================================== */
 
     @media (max-width: 900px) {
 
-      .history-intro {
+      .history-home-grid {
         grid-template-columns: 1fr;
+
         gap: 40px;
       }
 
-      .history-copy {
+      .history-home-copy {
         max-width: none;
-      }
-
-      .history-complete-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .history-side {
-        position: static;
       }
 
     }
@@ -573,11 +564,11 @@
 
     @media (max-width: 760px) {
 
-      .history-section {
+      .history-home {
         padding: 55px 18px;
       }
 
-      .history-copy h2 {
+      .history-home h2 {
         font-size: 43px;
       }
 
@@ -585,7 +576,7 @@
         font-size: 15px;
       }
 
-      .history-carousel-frame {
+      .history-frame {
         aspect-ratio: 4 / 3;
       }
 
@@ -604,20 +595,6 @@
         height: 38px;
       }
 
-      .history-complete {
-        margin-top: 50px;
-        padding-top: 40px;
-      }
-
-      .history-article p {
-        font-size: 14px;
-        line-height: 1.8;
-      }
-
-      .history-article p:first-child {
-        font-size: 16px;
-      }
-
       .federal-section {
         padding: 45px 18px;
       }
@@ -632,12 +609,15 @@
 
       .federal-row {
         grid-template-columns: 1fr auto;
+
         gap: 10px 14px;
+
         padding: 16px;
       }
 
       .federal-date {
         grid-column: 1 / -1;
+
         font-size: 12px;
       }
 
@@ -678,20 +658,37 @@
 <body>
 
 
-  <a class="skip" href="#contenido">
+  <a
+    class="skip"
+    href="#contenido"
+  >
     Saltar al contenido
   </a>
 
 
   <div class="topline">
-    <span>SAN ANTONIO OESTE · RÍO NEGRO</span>
-    <span>DESDE EL 31 DE JULIO DE 1931</span>
+
+    <span>
+      SAN ANTONIO OESTE · RÍO NEGRO
+    </span>
+
+    <span>
+      DESDE EL 31 DE JULIO DE 1931
+    </span>
+
   </div>
 
 
+
+  <!-- HEADER -->
+
   <header>
 
-    <a class="brand" href="#">
+
+    <a
+      class="brand"
+      href="./index.html"
+    >
 
       <img
         src="./index_files/escudo.png"
@@ -706,13 +703,14 @@
     </a>
 
 
+
     <nav aria-label="Navegación principal">
 
       <a href="#club">
         El club
       </a>
 
-      <a href="#historia">
+      <a href="./historia.html">
         Historia
       </a>
 
@@ -737,22 +735,31 @@
 
     </nav>
 
+
   </header>
+
 
 
   <main id="contenido">
 
 
     <div class="sectionline">
-      <span>CLUB ATLÉTICO TALLERES</span>
-      <span>AMARILLO Y NEGRO. SIEMPRE.</span>
+
+      <span>
+        CLUB ATLÉTICO TALLERES
+      </span>
+
+      <span>
+        AMARILLO Y NEGRO. SIEMPRE.
+      </span>
+
     </div>
 
 
 
-    <!-- ===================================================
+    <!-- =================================================
          DESTACADOS
-    ==================================================== -->
+    ================================================== -->
 
     <section
       class="newsgrid"
@@ -763,7 +770,7 @@
 
       <a
         class="hero"
-        href="#historia"
+        href="./historia.html"
       >
 
         <img
@@ -807,7 +814,7 @@
 
         <a
           class="identity-card"
-          href="#historia"
+          href="./historia.html"
         >
 
           <span class="tag">
@@ -862,18 +869,20 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- ===================================================
-         AGENDA
-    ==================================================== -->
+    <!-- =================================================
+         PRÓXIMO PARTIDO
+    ================================================== -->
 
     <section
       class="agenda"
       id="agenda"
     >
+
 
       <div>
 
@@ -886,6 +895,7 @@
         </h2>
 
       </div>
+
 
 
       <div class="fixture next-match">
@@ -927,6 +937,7 @@
       </div>
 
 
+
       <div class="pending next-info">
 
         <strong>
@@ -943,33 +954,37 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- ===================================================
-         HISTORIA
-    ==================================================== -->
+    <!-- =================================================
+         RESUMEN DE HISTORIA
+    ================================================== -->
 
     <section
-      class="history-section"
-      id="historia"
+      class="history-home"
+      id="historia-resumen"
     >
 
 
-      <div class="history-intro">
+      <div class="history-home-grid">
 
 
-        <div class="history-copy">
+        <div class="history-home-copy">
+
 
           <span class="history-kicker">
             NUESTRA HISTORIA · DESDE 1931
           </span>
 
+
           <h2>
             Nacimos del<br>
             <em>trabajo.</em>
           </h2>
+
 
           <p class="history-lead">
             El Club Atlético Talleres nació el 31 de julio de 1931,
@@ -977,25 +992,25 @@
             San Antonio Oeste.
           </p>
 
+
           <p class="history-summary">
             Trabajadores del ferrocarril y vecinos de nuestra ciudad
-            encontraron en el deporte un espacio de encuentro,
-            pertenencia e identidad. De aquellas raíces ferroviarias
-            nació una institución construida sobre el esfuerzo,
-            el sacrificio y el compromiso. Más de nueve décadas después,
-            el amarillo y negro continúa pasando de generación en generación.
+            encontraron en el deporte un lugar de encuentro, identidad
+            y pertenencia. De aquellas raíces nació una institución
+            construida sobre el esfuerzo, el sacrificio y el compromiso.
+            Más de nueve décadas después, ese legado continúa pasando
+            de generación en generación.
           </p>
 
-          <button
-            class="history-open"
-            id="historyToggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="historiaCompleta"
+
+          <a
+            class="history-link"
+            href="./historia.html"
           >
-            LEER HISTORIA COMPLETA
-            <span>↓</span>
-          </button>
+            CONOCÉ NUESTRA HISTORIA
+            <span>↗</span>
+          </a>
+
 
         </div>
 
@@ -1009,7 +1024,7 @@
         >
 
 
-          <div class="history-carousel-frame">
+          <div class="history-frame">
 
 
             <div
@@ -1017,8 +1032,6 @@
               id="historyTrack"
             >
 
-
-              <!-- 1944 -->
 
               <div class="history-slide">
 
@@ -1028,15 +1041,20 @@
                 >
 
                 <div class="history-caption">
-                  <strong>Talleres en Bariloche</strong>
-                  <small>1944</small>
+
+                  <strong>
+                    Talleres en Bariloche
+                  </strong>
+
+                  <small>
+                    1944
+                  </small>
+
                 </div>
 
               </div>
 
 
-
-              <!-- 1945 -->
 
               <div class="history-slide">
 
@@ -1047,109 +1065,142 @@
                 >
 
                 <div class="history-caption">
-                  <strong>Talleres vs. Tronador</strong>
-                  <small>1945</small>
+
+                  <strong>
+                    Talleres vs. Tronador
+                  </strong>
+
+                  <small>
+                    1945
+                  </small>
+
                 </div>
 
               </div>
 
 
-
-              <!-- 1950 -->
 
               <div class="history-slide">
 
                 <img
                   src="./index_files/historia/2da-division-1950.jpg"
-                  alt="Segunda división de Talleres en 1950"
+                  alt="Segunda División de Talleres en 1950"
                   loading="lazy"
                 >
 
                 <div class="history-caption">
-                  <strong>Segunda División</strong>
-                  <small>1950</small>
+
+                  <strong>
+                    Segunda División
+                  </strong>
+
+                  <small>
+                    1950
+                  </small>
+
                 </div>
 
               </div>
 
 
-
-              <!-- 1958 -->
 
               <div class="history-slide">
 
                 <img
                   src="./index_files/historia/talleres-1958.jpg"
-                  alt="Club Atlético Talleres en 1958"
+                  alt="Talleres en 1958"
                   loading="lazy"
                 >
 
                 <div class="history-caption">
-                  <strong>Una generación aurinegra</strong>
-                  <small>1958</small>
+
+                  <strong>
+                    Una generación aurinegra
+                  </strong>
+
+                  <small>
+                    1958
+                  </small>
+
                 </div>
 
               </div>
 
 
-
-              <!-- 1973 -->
 
               <div class="history-slide">
 
                 <img
                   src="./index_files/historia/talleres-1973.jpg"
-                  alt="Club Atlético Talleres en 1973"
+                  alt="Talleres en 1973"
                   loading="lazy"
                 >
 
                 <div class="history-caption">
-                  <strong>Talleres</strong>
-                  <small>1973</small>
+
+                  <strong>
+                    Talleres
+                  </strong>
+
+                  <small>
+                    1973
+                  </small>
+
                 </div>
 
               </div>
 
 
-
-              <!-- HANDBALL -->
 
               <div class="history-slide">
 
                 <img
                   src="./index_files/historia/handball-decada-80.jpg"
-                  alt="Handball de Talleres durante la década de 1980"
+                  alt="Handball de Talleres en la década de 1980"
                   loading="lazy"
                 >
 
                 <div class="history-caption">
-                  <strong>Talleres también fue más que fútbol</strong>
-                  <small>Década del 80</small>
+
+                  <strong>
+                    Mucho más que fútbol
+                  </strong>
+
+                  <small>
+                    Década del 80
+                  </small>
+
                 </div>
 
               </div>
 
 
 
-              <!-- TERRENO 1984 -->
-
               <div class="history-slide">
 
                 <img
                   src="./index_files/historia/talleres-compra-terreno-1984.jpg"
-                  alt="Compra del terreno del Club Atlético Talleres en 1984"
+                  alt="Compra del terreno de Talleres en 1984"
                   loading="lazy"
                 >
 
                 <div class="history-caption">
-                  <strong>Un paso en el crecimiento del club</strong>
-                  <small>1984</small>
+
+                  <strong>
+                    Crecimiento institucional
+                  </strong>
+
+                  <small>
+                    1984
+                  </small>
+
                 </div>
 
               </div>
 
 
             </div>
+
 
           </div>
 
@@ -1163,18 +1214,61 @@
               id="historyDots"
             >
 
-              <button class="history-dot active" type="button" data-slide="0" aria-label="Foto 1"></button>
-              <button class="history-dot" type="button" data-slide="1" aria-label="Foto 2"></button>
-              <button class="history-dot" type="button" data-slide="2" aria-label="Foto 3"></button>
-              <button class="history-dot" type="button" data-slide="3" aria-label="Foto 4"></button>
-              <button class="history-dot" type="button" data-slide="4" aria-label="Foto 5"></button>
-              <button class="history-dot" type="button" data-slide="5" aria-label="Foto 6"></button>
-              <button class="history-dot" type="button" data-slide="6" aria-label="Foto 7"></button>
+              <button
+                class="history-dot active"
+                type="button"
+                data-slide="0"
+                aria-label="Foto 1"
+              ></button>
+
+              <button
+                class="history-dot"
+                type="button"
+                data-slide="1"
+                aria-label="Foto 2"
+              ></button>
+
+              <button
+                class="history-dot"
+                type="button"
+                data-slide="2"
+                aria-label="Foto 3"
+              ></button>
+
+              <button
+                class="history-dot"
+                type="button"
+                data-slide="3"
+                aria-label="Foto 4"
+              ></button>
+
+              <button
+                class="history-dot"
+                type="button"
+                data-slide="4"
+                aria-label="Foto 5"
+              ></button>
+
+              <button
+                class="history-dot"
+                type="button"
+                data-slide="5"
+                aria-label="Foto 6"
+              ></button>
+
+              <button
+                class="history-dot"
+                type="button"
+                data-slide="6"
+                aria-label="Foto 7"
+              ></button>
 
             </div>
 
 
+
             <div class="history-arrows">
+
 
               <button
                 class="history-arrow"
@@ -1185,6 +1279,7 @@
                 ←
               </button>
 
+
               <button
                 class="history-arrow"
                 id="historyNext"
@@ -1194,203 +1289,15 @@
                 →
               </button>
 
+
             </div>
 
 
           </div>
 
-        </div>
-
-
-      </div>
-
-
-
-      <!-- HISTORIA COMPLETA -->
-
-      <div
-        class="history-complete"
-        id="historiaCompleta"
-      >
-
-
-        <div class="history-complete-grid">
-
-
-          <aside class="history-side">
-
-            <span>
-              CLUB ATLÉTICO TALLERES
-            </span>
-
-            <h3>
-              Una historia construida por generaciones.
-            </h3>
-
-          </aside>
-
-
-
-          <article class="history-article">
-
-
-            <p>
-              El Club Atlético Talleres de San Antonio Oeste nació el
-              31 de julio de 1931, profundamente ligado a la historia
-              ferroviaria de nuestra ciudad.
-            </p>
-
-
-            <p>
-              Sus orígenes se encuentran en aquellos trabajadores del
-              ferrocarril que, además de cumplir sus tareas en los talleres
-              ferroviarios de San Antonio Oeste, encontraron en el deporte
-              una forma de encuentro, pertenencia e identidad. Entre ellos
-              hubo obreros llegados desde distintos puntos del país, incluidos
-              trabajadores provenientes de Tafí Viejo, Tucumán, que junto a
-              vecinos de la localidad comenzaron a darle forma a una institución
-              que con el paso del tiempo se convertiría en una parte inseparable
-              de la vida social y deportiva de San Antonio Oeste.
-            </p>
-
-
-            <p>
-              El nombre Talleres no es casual. Representa nuestras raíces,
-              nuestra historia y el vínculo con una época en la que el
-              ferrocarril tuvo un papel fundamental en el desarrollo de la
-              ciudad. De ese origen trabajador nació también el espíritu que
-              todavía identifica al club: esfuerzo, sacrificio, compromiso y
-              sentido de pertenencia.
-            </p>
-
-
-            <p>
-              Con el amarillo y el negro como colores distintivos, Talleres
-              fue creciendo generación tras generación. El fútbol ocupó desde
-              sus primeros años un lugar central y rápidamente el club comenzó
-              a formar parte de la competencia local, construyendo una larga
-              tradición dentro del deporte sanantoniense.
-            </p>
-
-
-            <p>
-              A lo largo de las décadas, cientos de futbolistas vistieron
-              nuestra camiseta y muchas familias encontraron en Talleres un
-              lugar de encuentro. Los nombres, las historias y los recuerdos
-              fueron pasando de padres a hijos, formando una identidad que
-              excede cualquier resultado deportivo.
-            </p>
-
-
-            <div class="history-highlight">
-
-              <strong>
-                Pero Talleres nunca fue
-              </strong>
-
-              <strong>
-                solamente fútbol.
-              </strong>
-
-            </div>
-
-
-            <p>
-              Con el paso de los años, la institución incorporó distintas
-              disciplinas y actividades deportivas y sociales. Básquet,
-              tenis, bochas, handball, vóley, patín y otras propuestas fueron
-              encontrando su espacio dentro del club, permitiendo que nuevas
-              generaciones pudieran desarrollarse, competir, aprender y compartir.
-            </p>
-
-
-            <p>
-              El crecimiento institucional también estuvo acompañado por
-              dirigentes, socios, deportistas y colaboradores que dedicaron
-              tiempo y esfuerzo para mejorar las instalaciones y ampliar las
-              posibilidades del club. El gimnasio, los espacios deportivos,
-              los vestuarios y los distintos proyectos de infraestructura son
-              parte de una construcción colectiva que continúa hasta nuestros días.
-            </p>
-
-
-            <p>
-              En el fútbol, Talleres escribió numerosas páginas importantes.
-              La institución logró múltiples campeonatos en las competencias
-              regionales y se convirtió en uno de los clubes más representativos
-              de la zona. Desde la década de 2010, el equipo volvió a consolidarse
-              como protagonista, obteniendo títulos y accediendo a torneos de
-              alcance nacional.
-            </p>
-
-
-            <p>
-              Talleres representó a San Antonio Oeste en competencias como
-              el Torneo del Interior, el Federal C y el Torneo Regional Federal
-              Amateur, llevando nuestros colores a distintas localidades de la
-              Patagonia y enfrentando a instituciones de toda la región.
-            </p>
-
-
-            <p>
-              También las divisiones formativas tuvieron momentos históricos.
-              En 2021, la categoría 2008 consiguió un logro inolvidable al
-              consagrarse campeona del tradicional Mundialito Infantil organizado
-              por Deportivo Roca, convirtiéndose en el primer equipo de San Antonio
-              Oeste en alcanzar ese título.
-            </p>
-
-
-            <p>
-              Ese triunfo representa uno de los valores fundamentales de Talleres:
-              formar desde abajo, acompañar a nuestros jóvenes y generar espacios
-              donde puedan crecer tanto deportiva como personalmente.
-            </p>
-
-
-            <p>
-              Hoy, más de nueve décadas después de aquel 31 de julio de 1931,
-              Talleres continúa escribiendo su historia.
-            </p>
-
-
-            <p>
-              Una historia construida por ferroviarios, deportistas, dirigentes,
-              entrenadores, familias, socios, hinchas y vecinos. Una historia
-              hecha de tardes de fútbol, entrenamientos, campeonatos, viajes,
-              sacrificios, festejos y también momentos difíciles que ayudaron
-              a fortalecer a la institución.
-            </p>
-
-
-            <p>
-              Generaciones enteras crecieron dentro del club y otras siguen
-              llegando para continuar ese legado.
-            </p>
-
-
-            <div class="history-highlight">
-
-              <strong>Talleres es memoria.</strong>
-              <strong>Es identidad.</strong>
-              <strong>Es trabajo.</strong>
-              <strong>Es pertenencia.</strong>
-              <strong>Es San Antonio Oeste.</strong>
-
-            </div>
-
-
-            <p>
-              Porque Talleres no es solamente una camiseta amarilla y negra.
-              Y mientras haya alguien dispuesto a defender estos colores,
-              nuestra historia seguirá escribiéndose.
-            </p>
-
-
-          </article>
-
 
         </div>
+
 
       </div>
 
@@ -1399,9 +1306,9 @@
 
 
 
-    <!-- ===================================================
+    <!-- =================================================
          FEDERAL
-    ==================================================== -->
+    ================================================== -->
 
     <section
       class="federal-section"
@@ -1458,8 +1365,15 @@
             </span>
 
             <div>
-              <h3>Talleres queda libre</h3>
-              <p>Primera rueda</p>
+
+              <h3>
+                Talleres queda libre
+              </h3>
+
+              <p>
+                Primera rueda
+              </p>
+
             </div>
 
           </div>
@@ -1490,9 +1404,19 @@
             <div>
 
               <div class="match-result">
-                <span>Talleres 0</span>
-                <span class="divider">-</span>
-                <span>2 Jorge Newbery</span>
+
+                <span>
+                  Talleres 0
+                </span>
+
+                <span class="divider">
+                  -
+                </span>
+
+                <span>
+                  2 Jorge Newbery
+                </span>
+
               </div>
 
               <p>
@@ -1575,8 +1499,15 @@
             </span>
 
             <div>
-              <h3>Talleres queda libre</h3>
-              <p>Segunda rueda</p>
+
+              <h3>
+                Talleres queda libre
+              </h3>
+
+              <p>
+                Segunda rueda
+              </p>
+
             </div>
 
           </div>
@@ -1605,8 +1536,15 @@
             >
 
             <div>
-              <h3>Jorge Newbery</h3>
-              <p>Fecha y horario a confirmar</p>
+
+              <h3>
+                Jorge Newbery
+              </h3>
+
+              <p>
+                Fecha y horario a confirmar
+              </p>
+
             </div>
 
           </div>
@@ -1635,8 +1573,15 @@
             >
 
             <div>
-              <h3>Deportivo Villalonga</h3>
-              <p>Fecha y horario a confirmar</p>
+
+              <h3>
+                Deportivo Villalonga
+              </h3>
+
+              <p>
+                Fecha y horario a confirmar
+              </p>
+
             </div>
 
           </div>
@@ -1650,13 +1595,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- ===================================================
+    <!-- =================================================
          CLUB
-    ==================================================== -->
+    ================================================== -->
 
     <section
       class="club"
@@ -1683,7 +1629,7 @@
 
         <a
           class="textlink"
-          href="#historia"
+          href="./historia.html"
         >
           Conocer nuestra historia ↗
         </a>
@@ -1691,12 +1637,15 @@
       </div>
 
 
+
       <div class="facts">
 
 
         <article>
 
-          <strong>1931</strong>
+          <strong>
+            1931
+          </strong>
 
           <span>
             El comienzo de nuestra historia
@@ -1707,7 +1656,9 @@
 
         <article>
 
-          <strong>SAO</strong>
+          <strong>
+            SAO
+          </strong>
 
           <span>
             Nuestra ciudad. Nuestro lugar.
@@ -1718,7 +1669,9 @@
 
         <article>
 
-          <strong>Aurinegro</strong>
+          <strong>
+            Aurinegro
+          </strong>
 
           <span>
             Dos colores que nos representan
@@ -1729,7 +1682,9 @@
 
         <article>
 
-          <strong>San Martín 134</strong>
+          <strong>
+            San Martín 134
+          </strong>
 
           <span>
             Nuestra sede en San Antonio Oeste
@@ -1740,13 +1695,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- ===================================================
+    <!-- =================================================
          FÚTBOL
-    ==================================================== -->
+    ================================================== -->
 
     <section
       class="football"
@@ -1765,6 +1721,7 @@
         </h2>
 
       </div>
+
 
 
       <div class="football-info">
@@ -1799,8 +1756,8 @@
           </h3>
 
           <p>
-            Una identidad que acompaña al club dentro y
-            fuera de la cancha.
+            Una identidad que acompaña al club dentro
+            y fuera de la cancha.
           </p>
 
         </article>
@@ -1825,13 +1782,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- ===================================================
+    <!-- =================================================
          SEDE
-    ==================================================== -->
+    ================================================== -->
 
     <section
       class="contact"
@@ -1865,16 +1823,14 @@
 
 
 
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
 
     <a
       class="brand"
-      href="#"
+      href="./index.html"
     >
 
       <img
@@ -1904,13 +1860,9 @@
 
 
 
-  <!-- =====================================================
-       JAVASCRIPT HISTORIA
-  ====================================================== -->
+  <!-- CARRUSEL -->
 
   <script>
-
-    /* CARRUSEL */
 
     const historyTrack =
       document.getElementById("historyTrack");
@@ -1931,7 +1883,7 @@
       document.getElementById("historyCarousel");
 
 
-    let historyCurrent = 0;
+    let currentHistorySlide = 0;
 
     let historyTimer;
 
@@ -1939,30 +1891,40 @@
     function showHistorySlide(index) {
 
       if (index >= historySlides.length) {
-        historyCurrent = 0;
+
+        currentHistorySlide = 0;
+
       }
 
       else if (index < 0) {
-        historyCurrent = historySlides.length - 1;
+
+        currentHistorySlide =
+          historySlides.length - 1;
+
       }
 
       else {
-        historyCurrent = index;
+
+        currentHistorySlide =
+          index;
+
       }
 
 
       historyTrack.style.transform =
-        `translateX(-${historyCurrent * 100}%)`;
+        `translateX(-${currentHistorySlide * 100}%)`;
 
 
-      historyDots.forEach((dot, i) => {
+      historyDots.forEach(
+        (dot, i) => {
 
-        dot.classList.toggle(
-          "active",
-          i === historyCurrent
-        );
+          dot.classList.toggle(
+            "active",
+            i === currentHistorySlide
+          );
 
-      });
+        }
+      );
 
     }
 
@@ -1970,7 +1932,7 @@
     function nextHistorySlide() {
 
       showHistorySlide(
-        historyCurrent + 1
+        currentHistorySlide + 1
       );
 
     }
@@ -1979,8 +1941,21 @@
     function previousHistorySlide() {
 
       showHistorySlide(
-        historyCurrent - 1
+        currentHistorySlide - 1
       );
+
+    }
+
+
+    function stopHistoryCarousel() {
+
+      if (historyTimer) {
+
+        clearInterval(
+          historyTimer
+        );
+
+      }
 
     }
 
@@ -1998,20 +1973,12 @@
     }
 
 
-    function stopHistoryCarousel() {
-
-      if (historyTimer) {
-        clearInterval(historyTimer);
-      }
-
-    }
-
-
     historyNext.addEventListener(
       "click",
       () => {
 
         nextHistorySlide();
+
         startHistoryCarousel();
 
       }
@@ -2023,6 +1990,7 @@
       () => {
 
         previousHistorySlide();
+
         startHistoryCarousel();
 
       }
@@ -2037,7 +2005,9 @@
           () => {
 
             showHistorySlide(
-              Number(dot.dataset.slide)
+              Number(
+                dot.dataset.slide
+              )
             );
 
             startHistoryCarousel();
@@ -2062,58 +2032,6 @@
 
 
     startHistoryCarousel();
-
-
-
-    /* MOSTRAR HISTORIA COMPLETA */
-
-    const historyToggle =
-      document.getElementById("historyToggle");
-
-    const historyComplete =
-      document.getElementById("historiaCompleta");
-
-
-    historyToggle.addEventListener(
-      "click",
-      () => {
-
-        const open =
-          historyComplete.classList.toggle(
-            "visible"
-          );
-
-
-        historyToggle.setAttribute(
-          "aria-expanded",
-          open
-        );
-
-
-        historyToggle.innerHTML =
-          open
-            ? "OCULTAR HISTORIA <span>↑</span>"
-            : "LEER HISTORIA COMPLETA <span>↓</span>";
-
-
-        if (open) {
-
-          setTimeout(
-            () => {
-
-              historyComplete.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-              });
-
-            },
-            100
-          );
-
-        }
-
-      }
-    );
 
   </script>
 
