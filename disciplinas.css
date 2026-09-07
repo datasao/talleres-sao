@@ -1,0 +1,521 @@
+/* =========================================================
+   MENÚ DESPLEGABLE - DISCIPLINAS
+========================================================= */
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-dropdown summary::after {
+  content: " ↓";
+  font-size: 10px;
+}
+
+.nav-dropdown[open] summary::after {
+  content: " ↑";
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  z-index: 9999;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 190px;
+
+  padding: 8px;
+
+  border: 1px solid #292929;
+
+  background: #111;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+.nav-dropdown-menu a {
+  display: block;
+
+  padding: 11px 13px !important;
+
+  color: #fff !important;
+
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-decoration: none;
+
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.nav-dropdown-menu a:last-child {
+  border-bottom: 0;
+}
+
+.nav-dropdown-menu a:hover {
+  background: #ffd400 !important;
+  color: #111 !important;
+}
+
+
+/* =========================================================
+   PÁGINAS DE DISCIPLINAS
+========================================================= */
+
+.discipline-page {
+  background: #f3f3ee;
+  color: #111;
+}
+
+.discipline-hero {
+  position: relative;
+
+  min-height: 610px;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  background: #111;
+}
+
+.discipline-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image: var(--discipline-image);
+  background-position: center;
+  background-size: cover;
+
+  filter: saturate(.9);
+  transform: scale(1.01);
+}
+
+.discipline-hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.94) 0%,
+      rgba(0,0,0,.72) 45%,
+      rgba(0,0,0,.28) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.85) 0%,
+      transparent 60%
+    );
+}
+
+.discipline-hero-inner {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  padding: 85px 5%;
+
+  color: #fff;
+}
+
+.discipline-back {
+  display: inline-block;
+
+  margin-bottom: 55px;
+
+  color: #ffd400;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.discipline-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #ffd400;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.discipline-hero h1 {
+  max-width: 920px;
+
+  margin: 0 0 25px;
+
+  color: #fff;
+
+  font-size: clamp(58px, 9vw, 125px);
+  line-height: .82;
+  letter-spacing: -.06em;
+}
+
+.discipline-hero p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,.8);
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* PRESENTACIÓN */
+
+.discipline-intro {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+
+  gap: 80px;
+
+  padding: 95px 5%;
+
+  background: #ffd400;
+}
+
+.discipline-intro-label {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.discipline-intro h2 {
+  max-width: 900px;
+
+  margin: 0;
+
+  font-size: clamp(27px, 3.5vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -.03em;
+}
+
+
+/* CONTENIDO */
+
+.discipline-content {
+  padding: 95px 5%;
+}
+
+.discipline-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+.discipline-text h2,
+.training-section h2 {
+  margin: 0 0 22px;
+
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.discipline-text p {
+  margin: 0 0 20px;
+
+  color: #383838;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.discipline-importance {
+  padding: 35px;
+
+  background: #111;
+  color: #fff;
+}
+
+.discipline-importance span {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: #ffd400;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.discipline-importance h3 {
+  margin: 0 0 18px;
+
+  color: #fff;
+
+  font-size: 29px;
+  line-height: 1.05;
+}
+
+.discipline-importance p {
+  margin: 0;
+
+  color: rgba(255,255,255,.7);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* HORARIOS */
+
+.training-section {
+  padding: 95px 5%;
+
+  background: #111;
+  color: #fff;
+}
+
+.training-header {
+  max-width: 1200px;
+
+  margin: 0 auto 40px;
+}
+
+.training-header .discipline-label {
+  margin-bottom: 10px;
+}
+
+.training-header h2 {
+  color: #fff;
+}
+
+.training-header p {
+  max-width: 650px;
+
+  color: rgba(255,255,255,.6);
+
+  line-height: 1.7;
+}
+
+.training-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+.training-group {
+  padding: 27px;
+
+  border: 1px solid #333;
+
+  background: #181818;
+}
+
+.training-group.full {
+  grid-column: 1 / -1;
+}
+
+.training-group h3 {
+  margin: 0 0 20px;
+
+  color: #ffd400;
+
+  font-size: 17px;
+}
+
+.training-list {
+  display: grid;
+
+  gap: 12px;
+}
+
+.training-item {
+  display: grid;
+  grid-template-columns: minmax(130px, .8fr) 1.2fr;
+
+  gap: 20px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #303030;
+}
+
+.training-item:last-child {
+  border-bottom: 0;
+}
+
+.training-item strong {
+  color: #fff;
+
+  font-size: 14px;
+}
+
+.training-item span {
+  color: rgba(255,255,255,.66);
+
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+
+/* CTA */
+
+.discipline-cta {
+  padding: 95px 5%;
+
+  background: #ffd400;
+  color: #111;
+
+  text-align: center;
+}
+
+.discipline-cta h2 {
+  max-width: 900px;
+
+  margin: 0 auto 20px;
+
+  font-size: clamp(38px, 6vw, 76px);
+  line-height: .95;
+  letter-spacing: -.05em;
+}
+
+.discipline-cta p {
+  max-width: 650px;
+
+  margin: 0 auto 28px;
+
+  line-height: 1.7;
+}
+
+.discipline-cta a {
+  display: inline-flex;
+
+  padding: 14px 20px;
+
+  border: 1px solid #111;
+
+  background: #111;
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.discipline-cta a:hover {
+  background: transparent;
+  color: #111;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .discipline-intro,
+  .discipline-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .training-group.full {
+    grid-column: auto;
+  }
+
+}
+
+
+@media (max-width: 760px) {
+
+  header nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-dropdown {
+    width: auto;
+  }
+
+  .nav-dropdown-menu {
+    left: 0;
+
+    transform: none;
+  }
+
+  .discipline-hero {
+    min-height: 530px;
+  }
+
+  .discipline-hero-inner {
+    padding: 60px 18px;
+  }
+
+  .discipline-back {
+    margin-bottom: 45px;
+  }
+
+  .discipline-hero h1 {
+    font-size: 61px;
+  }
+
+  .discipline-hero p {
+    font-size: 15px;
+  }
+
+  .discipline-intro {
+    gap: 22px;
+
+    padding: 65px 18px;
+  }
+
+  .discipline-content,
+  .training-section,
+  .discipline-cta {
+    padding: 70px 18px;
+  }
+
+  .training-item {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+  }
+
+}

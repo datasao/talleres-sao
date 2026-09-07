@@ -14,7 +14,7 @@
 
   <meta
     name="description"
-    content="Club Atlético Talleres de San Antonio Oeste. Historia, fútbol, actualidad y comunidad aurinegra."
+    content="Club Atlético Talleres de San Antonio Oeste. Historia, disciplinas, fútbol, actualidad y comunidad aurinegra."
   >
 
   <link
@@ -29,9 +29,16 @@
     as="image"
   >
 
+  <!-- CSS ORIGINAL -->
   <link
     rel="stylesheet"
     href="./index_files/index.DuceRrPT.css"
+  >
+
+  <!-- CSS DE DISCIPLINAS -->
+  <link
+    rel="stylesheet"
+    href="./index_files/disciplinas.css"
   >
 
 
@@ -146,7 +153,9 @@
     }
 
 
-    /* CARRUSEL */
+    /* ==================================================
+       CARRUSEL HISTORIA
+    ================================================== */
 
     .history-carousel {
       min-width: 0;
@@ -222,7 +231,6 @@
 
     .history-caption strong {
       color: #fff;
-
       font-size: 15px;
     }
 
@@ -269,13 +277,11 @@
 
     .history-dot.active {
       width: 42px;
-
       background: #ffd400;
     }
 
     .history-arrows {
       display: flex;
-
       gap: 7px;
     }
 
@@ -666,6 +672,8 @@
   </a>
 
 
+  <!-- BARRA SUPERIOR -->
+
   <div class="topline">
 
     <span>
@@ -680,7 +688,9 @@
 
 
 
-  <!-- HEADER -->
+  <!-- ==================================================
+       HEADER
+  ================================================== -->
 
   <header>
 
@@ -706,25 +716,65 @@
 
     <nav aria-label="Navegación principal">
 
+
       <a href="#club">
         El club
       </a>
+
 
       <a href="./historia.html">
         Historia
       </a>
 
-      <a href="#futbol">
-        Fútbol
-      </a>
+
+      <!-- DISCIPLINAS -->
+
+      <details class="nav-dropdown">
+
+        <summary>
+          Disciplinas
+        </summary>
+
+        <div class="nav-dropdown-menu">
+
+          <a href="./futbol.html">
+            FÚTBOL
+          </a>
+
+          <a href="./handball.html">
+            HANDBALL
+          </a>
+
+          <a href="./newcom.html">
+            NEWCOM
+          </a>
+
+          <a href="./voley.html">
+            VOLEY
+          </a>
+
+          <a href="./bochas.html">
+            BOCHAS
+          </a>
+
+          <a href="./hockey.html">
+            HOCKEY
+          </a>
+
+        </div>
+
+      </details>
+
 
       <a href="#federal">
         Federal
       </a>
 
+
       <a href="#agenda">
         Agenda
       </a>
+
 
       <a
         class="nav-contact"
@@ -733,12 +783,17 @@
         Nuestra sede ↗
       </a>
 
+
     </nav>
 
 
   </header>
 
 
+
+  <!-- ==================================================
+       CONTENIDO
+  ================================================== -->
 
   <main id="contenido">
 
@@ -846,7 +901,7 @@
 
         <a
           class="football-card"
-          href="#futbol"
+          href="./futbol.html"
         >
 
           <span class="tag">
@@ -860,7 +915,7 @@
           </h2>
 
           <span>
-            Identidad aurinegra
+            Conocé nuestro fútbol
             <b>↗</b>
           </span>
 
@@ -960,7 +1015,7 @@
 
 
     <!-- =================================================
-         RESUMEN DE HISTORIA
+         HISTORIA - RESUMEN
     ================================================== -->
 
     <section
@@ -971,6 +1026,8 @@
 
       <div class="history-home-grid">
 
+
+        <!-- TEXTO -->
 
         <div class="history-home-copy">
 
@@ -1033,6 +1090,8 @@
             >
 
 
+              <!-- 1944 -->
+
               <div class="history-slide">
 
                 <img
@@ -1055,6 +1114,8 @@
               </div>
 
 
+
+              <!-- 1945 -->
 
               <div class="history-slide">
 
@@ -1080,6 +1141,8 @@
 
 
 
+              <!-- 1950 -->
+
               <div class="history-slide">
 
                 <img
@@ -1103,6 +1166,8 @@
               </div>
 
 
+
+              <!-- 1958 -->
 
               <div class="history-slide">
 
@@ -1128,6 +1193,8 @@
 
 
 
+              <!-- 1973 -->
+
               <div class="history-slide">
 
                 <img
@@ -1152,6 +1219,8 @@
 
 
 
+              <!-- HANDBALL -->
+
               <div class="history-slide">
 
                 <img
@@ -1175,6 +1244,8 @@
               </div>
 
 
+
+              <!-- TERRENO 1984 -->
 
               <div class="history-slide">
 
@@ -1206,6 +1277,8 @@
 
 
 
+          <!-- CONTROLES -->
+
           <div class="history-controls">
 
 
@@ -1214,12 +1287,14 @@
               id="historyDots"
             >
 
+
               <button
                 class="history-dot active"
                 type="button"
                 data-slide="0"
                 aria-label="Foto 1"
               ></button>
+
 
               <button
                 class="history-dot"
@@ -1228,12 +1303,14 @@
                 aria-label="Foto 2"
               ></button>
 
+
               <button
                 class="history-dot"
                 type="button"
                 data-slide="2"
                 aria-label="Foto 3"
               ></button>
+
 
               <button
                 class="history-dot"
@@ -1242,12 +1319,14 @@
                 aria-label="Foto 4"
               ></button>
 
+
               <button
                 class="history-dot"
                 type="button"
                 data-slide="4"
                 aria-label="Foto 5"
               ></button>
+
 
               <button
                 class="history-dot"
@@ -1256,12 +1335,14 @@
                 aria-label="Foto 6"
               ></button>
 
+
               <button
                 class="history-dot"
                 type="button"
                 data-slide="6"
                 aria-label="Foto 7"
               ></button>
+
 
             </div>
 
@@ -1354,15 +1435,19 @@
 
         <article class="federal-row free">
 
+
           <div class="federal-date">
             Fecha 1
           </div>
 
+
           <div class="federal-team">
+
 
             <span class="federal-no-logo">
               —
             </span>
+
 
             <div>
 
@@ -1376,11 +1461,14 @@
 
             </div>
 
+
           </div>
+
 
           <span class="federal-status libre">
             Libre
           </span>
+
 
         </article>
 
@@ -1390,18 +1478,23 @@
 
         <article class="federal-row played">
 
+
           <div class="federal-date">
             Fecha 2
           </div>
 
+
           <div class="federal-team">
+
 
             <img
               src="./index_files/logos/jorge-newbery.png"
               alt="Jorge Newbery"
             >
 
+
             <div>
+
 
               <div class="match-result">
 
@@ -1419,6 +1512,7 @@
 
               </div>
 
+
               <p>
                 Domingo 6 de septiembre de 2026 · 13:00 hs
               </p>
@@ -1427,13 +1521,17 @@
                 Cancha de Talleres · San Antonio Oeste
               </p>
 
+
             </div>
 
+
           </div>
+
 
           <span class="federal-status finished">
             Finalizado
           </span>
+
 
         </article>
 
@@ -1443,16 +1541,20 @@
 
         <article class="federal-row">
 
+
           <div class="federal-date">
             Fecha 3
           </div>
 
+
           <div class="federal-team">
+
 
             <img
               src="./index_files/logos/deportivo-villalonga.png"
               alt="Deportivo Villalonga"
             >
+
 
             <div>
 
@@ -1474,11 +1576,14 @@
 
             </div>
 
+
           </div>
+
 
           <span class="federal-status visitor">
             Visitante
           </span>
+
 
         </article>
 
@@ -1488,15 +1593,19 @@
 
         <article class="federal-row free">
 
+
           <div class="federal-date">
             Fecha 4
           </div>
 
+
           <div class="federal-team">
+
 
             <span class="federal-no-logo">
               —
             </span>
+
 
             <div>
 
@@ -1510,11 +1619,14 @@
 
             </div>
 
+
           </div>
+
 
           <span class="federal-status libre">
             Libre
           </span>
+
 
         </article>
 
@@ -1524,16 +1636,20 @@
 
         <article class="federal-row">
 
+
           <div class="federal-date">
             Fecha 5
           </div>
 
+
           <div class="federal-team">
+
 
             <img
               src="./index_files/logos/jorge-newbery.png"
               alt="Jorge Newbery"
             >
+
 
             <div>
 
@@ -1547,11 +1663,14 @@
 
             </div>
 
+
           </div>
+
 
           <span class="federal-status visitor">
             Visitante
           </span>
+
 
         </article>
 
@@ -1561,16 +1680,20 @@
 
         <article class="federal-row">
 
+
           <div class="federal-date">
             Fecha 6
           </div>
 
+
           <div class="federal-team">
+
 
             <img
               src="./index_files/logos/deportivo-villalonga.png"
               alt="Deportivo Villalonga"
             >
+
 
             <div>
 
@@ -1584,11 +1707,14 @@
 
             </div>
 
+
           </div>
+
 
           <span class="federal-status local">
             Local
           </span>
+
 
         </article>
 
@@ -1612,14 +1738,17 @@
 
       <div class="club-heading">
 
+
         <span class="eyebrow">
           NUESTRO CLUB
         </span>
+
 
         <h2>
           De San Antonio.<br>
           De toda la vida.
         </h2>
+
 
         <p>
           Desde 1931, generaciones de deportistas, dirigentes,
@@ -1627,12 +1756,14 @@
           del Club Atlético Talleres.
         </p>
 
+
         <a
           class="textlink"
           href="./historia.html"
         >
           Conocer nuestra historia ↗
         </a>
+
 
       </div>
 
@@ -1701,7 +1832,7 @@
 
 
     <!-- =================================================
-         FÚTBOL
+         DISCIPLINAS / FÚTBOL
     ================================================== -->
 
     <section
@@ -1712,13 +1843,16 @@
 
       <div>
 
+
         <span class="eyebrow">
-          PASIÓN POR EL FÚTBOL
+          NUESTRAS DISCIPLINAS
         </span>
 
+
         <h2>
-          Talleres en la cancha.
+          Talleres en movimiento.
         </h2>
+
 
       </div>
 
@@ -1730,51 +1864,61 @@
         <article>
 
           <span>
-            01 / COMPETENCIA
+            01 / FÚTBOL
           </span>
 
           <h3>
-            Liga Rionegrina
+            Una pasión histórica
           </h3>
 
           <p>
-            Subsede Atlántica. El fútbol de nuestra región,
-            con los colores de Talleres.
+            Desde las categorías formativas hasta Primera,
+            generaciones enteras defendiendo nuestros colores.
           </p>
 
+          <a
+            class="textlink"
+            href="./futbol.html"
+          >
+            Ver Fútbol ↗
+          </a>
+
         </article>
+
 
 
         <article>
 
           <span>
-            02 / NUESTRA CAMISETA
+            02 / MÁS DEPORTE
           </span>
 
           <h3>
-            Amarillo y negro
+            Un club para todos
           </h3>
 
           <p>
-            Una identidad que acompaña al club dentro
-            y fuera de la cancha.
+            Handball, vóley, newcom, bochas y hockey amplían
+            nuestra propuesta deportiva y social.
           </p>
 
         </article>
 
 
+
         <article>
 
           <span>
-            03 / ACTUALIDAD
+            03 / COMUNIDAD
           </span>
 
           <h3>
-            Noticias del equipo
+            Sumate a Talleres
           </h3>
 
           <p>
-            Resultados, fixture y actualidad de nuestros equipos.
+            Encontrá tu disciplina, conocé los horarios
+            y empezá a formar parte del club.
           </p>
 
         </article>
@@ -1796,17 +1940,21 @@
       id="contacto"
     >
 
+
       <span class="eyebrow">
         NOS ENCONTRAMOS EN EL CLUB
       </span>
+
 
       <h2>
         La casa aurinegra.
       </h2>
 
+
       <p>
         Av. San Martín 134 · San Antonio Oeste · Río Negro
       </p>
+
 
       <a
         href="https://www.google.com/maps/search/?api=1&query=Club+Atletico+Talleres+San+Martin+134+San+Antonio+Oeste"
@@ -1816,6 +1964,7 @@
         Cómo llegar ↗
       </a>
 
+
     </section>
 
 
@@ -1823,7 +1972,9 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
 
   <footer>
 
@@ -1860,9 +2011,15 @@
 
 
 
-  <!-- CARRUSEL -->
+  <!-- ==================================================
+       JAVASCRIPT
+  ================================================== -->
 
   <script>
+
+    /* =============================================
+       CARRUSEL HISTORIA
+    ============================================= */
 
     const historyTrack =
       document.getElementById("historyTrack");
@@ -1973,28 +2130,36 @@
     }
 
 
-    historyNext.addEventListener(
-      "click",
-      () => {
+    if (historyNext) {
 
-        nextHistorySlide();
+      historyNext.addEventListener(
+        "click",
+        () => {
 
-        startHistoryCarousel();
+          nextHistorySlide();
 
-      }
-    );
+          startHistoryCarousel();
+
+        }
+      );
+
+    }
 
 
-    historyPrev.addEventListener(
-      "click",
-      () => {
+    if (historyPrev) {
 
-        previousHistorySlide();
+      historyPrev.addEventListener(
+        "click",
+        () => {
 
-        startHistoryCarousel();
+          previousHistorySlide();
 
-      }
-    );
+          startHistoryCarousel();
+
+        }
+      );
+
+    }
 
 
     historyDots.forEach(
@@ -2019,19 +2184,68 @@
     );
 
 
-    historyCarousel.addEventListener(
-      "mouseenter",
-      stopHistoryCarousel
+    if (historyCarousel) {
+
+      historyCarousel.addEventListener(
+        "mouseenter",
+        stopHistoryCarousel
+      );
+
+
+      historyCarousel.addEventListener(
+        "mouseleave",
+        startHistoryCarousel
+      );
+
+
+      startHistoryCarousel();
+
+    }
+
+
+
+    /* =============================================
+       CERRAR MENÚ DISCIPLINAS AL TOCAR AFUERA
+    ============================================= */
+
+    const disciplineDropdown =
+      document.querySelector(".nav-dropdown");
+
+
+    document.addEventListener(
+      "click",
+      event => {
+
+        if (
+          disciplineDropdown &&
+          !disciplineDropdown.contains(event.target)
+        ) {
+
+          disciplineDropdown.removeAttribute("open");
+
+        }
+
+      }
     );
 
 
-    historyCarousel.addEventListener(
-      "mouseleave",
-      startHistoryCarousel
+    /* ESC PARA CERRAR */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key === "Escape" &&
+          disciplineDropdown
+        ) {
+
+          disciplineDropdown.removeAttribute("open");
+
+        }
+
+      }
     );
-
-
-    startHistoryCarousel();
 
   </script>
 
